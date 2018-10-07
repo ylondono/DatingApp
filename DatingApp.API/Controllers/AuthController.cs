@@ -74,6 +74,8 @@ namespace DatingApp.API.Controllers
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
+            // Para desencriptar el token:  https://jwt.io/
+
             return Ok(new {
                 token = tokenHandler.WriteToken(token)
             });
